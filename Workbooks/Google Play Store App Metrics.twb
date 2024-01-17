@@ -1,0 +1,2468 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20231.23.1011.0410                               -->
+<workbook original-version='18.1' source-build='2023.1.7 (20231.23.1011.0410)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <DashboardMttwImageObject />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='GooglePlayStoreAppMetrics' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Chart' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Donut&quot;'>
+        <calculation class='tableau' formula='&quot;Donut&quot;' />
+        <members>
+          <member value='&quot;Donut&quot;' />
+          <member value='&quot;Bar&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='googleplaystoreapps' inline='true' name='federated.05cla7s1od0x7818xnm9n1tutg5l' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='googleplaystoreapps' name='textscan.05f97fg107cddg182b6sg1i5gutc'>
+            <connection class='textscan' cleaning='yes' compat='no' csvFile='C:/Users/sures/Documents/My Tableau Repository/Datasources/2023.1/en_US-US/googleplaystoreapps.csv' dataRefreshTime='' directory='C:/Users/sures/Documents/My Tableau Repository/Datasources/2023.1/en_US-US' filename='C:/Users/sures/AppData/Local/Temp/TableauTemp/0t1787c18mo9l71dt4diu1xvxfpw/googleplaystoreapps.csv.xlsx' interpretationMode='8' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.05f97fg107cddg182b6sg1i5gutc' name='googleplaystoreapps.csv' table='[C:\Users\sures\Documents\My Tableau Repository\Datasources\2023.1\en_US-US\googleplaystoreapps#csv]' type='table'>
+          <columns character-set='UTF-8' gridOrigin='A1:J7478:no:A1:J7478:2' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='App' ordinal='0' />
+            <column datatype='string' name='Category' ordinal='1' />
+            <column datatype='string' name='Rating' ordinal='2' />
+            <column datatype='integer' name='Reviews' ordinal='3' />
+            <column datatype='integer' name='Size' ordinal='4' />
+            <column datatype='integer' name='Installs' ordinal='5' />
+            <column datatype='string' name='Type' ordinal='6' />
+            <column datatype='string' name='Price' ordinal='7' />
+            <column datatype='string' name='Content Rating' ordinal='8' />
+            <column datatype='date' name='Last Updated' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.05f97fg107cddg182b6sg1i5gutc' name='googleplaystoreapps.csv' table='[C:\Users\sures\Documents\My Tableau Repository\Datasources\2023.1\en_US-US\googleplaystoreapps#csv]' type='table'>
+          <columns character-set='UTF-8' gridOrigin='A1:J7478:no:A1:J7478:2' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='App' ordinal='0' />
+            <column datatype='string' name='Category' ordinal='1' />
+            <column datatype='string' name='Rating' ordinal='2' />
+            <column datatype='integer' name='Reviews' ordinal='3' />
+            <column datatype='integer' name='Size' ordinal='4' />
+            <column datatype='integer' name='Installs' ordinal='5' />
+            <column datatype='string' name='Type' ordinal='6' />
+            <column datatype='string' name='Price' ordinal='7' />
+            <column datatype='string' name='Content Rating' ordinal='8' />
+            <column datatype='date' name='Last Updated' ordinal='9' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[googleplaystoreapps.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:J7478:no:A1:J7478:2&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>App</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[App]</local-name>
+            <parent-name>[googleplaystoreapps.csv]</parent-name>
+            <remote-alias>App</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Category]</local-name>
+            <parent-name>[googleplaystoreapps.csv]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rating</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Rating]</local-name>
+            <parent-name>[googleplaystoreapps.csv]</parent-name>
+            <remote-alias>Rating</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Reviews</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Reviews]</local-name>
+            <parent-name>[googleplaystoreapps.csv]</parent-name>
+            <remote-alias>Reviews</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Size</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Size]</local-name>
+            <parent-name>[googleplaystoreapps.csv]</parent-name>
+            <remote-alias>Size</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Installs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Installs]</local-name>
+            <parent-name>[googleplaystoreapps.csv]</parent-name>
+            <remote-alias>Installs</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Type]</local-name>
+            <parent-name>[googleplaystoreapps.csv]</parent-name>
+            <remote-alias>Type</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Price</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Price]</local-name>
+            <parent-name>[googleplaystoreapps.csv]</parent-name>
+            <remote-alias>Price</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Content Rating</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Content Rating]</local-name>
+            <parent-name>[googleplaystoreapps.csv]</parent-name>
+            <remote-alias>Content Rating</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Last Updated</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Last Updated]</local-name>
+            <parent-name>[googleplaystoreapps.csv]</parent-name>
+            <remote-alias>Last Updated</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='App Name' datatype='string' name='[App]' role='dimension' type='nominal' />
+      <column caption='Chart' datatype='string' name='[Calculation_562668523544489994]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+      </column>
+      <column caption='Corrected Size' datatype='integer' name='[Calculation_865817073089224714]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF isnull([Size]) then 0&#13;&#10;ELSE [Size]&#13;&#10;END' />
+      </column>
+      <column caption='Installs &amp; Reviews Ratio' datatype='real' name='[Calculation_865817073093193744]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Installs])/SUM([Reviews])' />
+      </column>
+      <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Content Rating]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Installs]' role='measure' type='quantitative' />
+      <column aggregation='CountD' datatype='string' name='[Price]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Reviews]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Size]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='googleplaystoreapps.csv' datatype='table' name='[__tableau_internal_object_id__].[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]' role='measure' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Installs]' derivation='Avg' name='[avg:Installs:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Reviews]' derivation='Avg' name='[avg:Reviews:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Content Rating]' derivation='None' name='[none:Content Rating:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Size]' derivation='None' name='[none:Size:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_865817073093193744]' derivation='User' name='[pcrk:usr:Calculation_865817073093193744:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Columns' rank-options='Competition,Ascending' type='PctRank' />
+      </column-instance>
+      <column-instance column='[Calculation_865817073089224714]' derivation='Sum' name='[sum:Calculation_865817073089224714:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Installs]' derivation='Sum' name='[sum:Installs:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Reviews]' derivation='Sum' name='[sum:Reviews:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Size]' derivation='Sum' name='[sum:Size:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_865817073093193744]' derivation='User' name='[usr:Calculation_865817073093193744:qk]' pivot='key' type='quantitative' />
+      <group caption='Action (Category)' hidden='true' name='[Action (Category)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Category]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Category,Content Rating)' hidden='true' name='[Action (Category,Content Rating)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Category]' />
+          <groupfilter function='level-members' level='[Content Rating]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Content Rating)' hidden='true' name='[Action (Content Rating)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Content Rating]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/sures/Documents/My Tableau Repository/Datasources/2023.1/en_US-US/googleplaystoreapps.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='01/17/2024 06:27:19 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='googleplaystoreapps' increment-value='%null%' refresh-type='create' rows-inserted='7476' timestamp-start='2024-01-17 06:27:18.738' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>App</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[App]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>App</remote-alias>
+              <ordinal>0</ordinal>
+              <family>googleplaystoreapps.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7476</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Category</remote-alias>
+              <ordinal>1</ordinal>
+              <family>googleplaystoreapps.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Rating</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Rating</remote-alias>
+              <ordinal>2</ordinal>
+              <family>googleplaystoreapps.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>46</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Reviews</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Reviews]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Reviews</remote-alias>
+              <ordinal>3</ordinal>
+              <family>googleplaystoreapps.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2169</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Size</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Size]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Size</remote-alias>
+              <ordinal>4</ordinal>
+              <family>googleplaystoreapps.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Installs</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Installs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Installs</remote-alias>
+              <ordinal>5</ordinal>
+              <family>googleplaystoreapps.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Type</remote-alias>
+              <ordinal>6</ordinal>
+              <family>googleplaystoreapps.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Price</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Price</remote-alias>
+              <ordinal>7</ordinal>
+              <family>googleplaystoreapps.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Content Rating</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Content Rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Content Rating</remote-alias>
+              <ordinal>8</ordinal>
+              <family>googleplaystoreapps.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Last Updated</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Last Updated]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Last Updated</remote-alias>
+              <ordinal>9</ordinal>
+              <family>googleplaystoreapps.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>994</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Category:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;FAMILY&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;BEAUTY&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;WEATHER&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;DATING&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;MEDICAL&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;FINANCE&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;EDUCATION&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;SPORTS&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;BUSINESS&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;SHOPPING&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;ENTERTAINMENT&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;PARENTING&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;PHOTOGRAPHY&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;SOCIAL&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;TOOLS&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;GAME&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;EVENTS&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;COMICS&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;PRODUCTIVITY&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;LIFESTYLE&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;COMMUNICATION&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.05cla7s1od0x7818xnm9n1tutg5l].[avg:Installs:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Installs:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.05cla7s1od0x7818xnm9n1tutg5l].[__tableau_internal_object_id__].[cnt:googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Size:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Size:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.05cla7s1od0x7818xnm9n1tutg5l]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.05cla7s1od0x7818xnm9n1tutg5l].[pcrk:usr:Calculation_865817073093193744:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.05cla7s1od0x7818xnm9n1tutg5l].[usr:Calculation_865817073093193744:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Calculation_865817073089224714:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.05cla7s1od0x7818xnm9n1tutg5l].[avg:Reviews:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Reviews:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Content Rating:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Adults only 18+&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Teen&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Mature 17+&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Everyone 10+&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Everyone&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Chart' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Donut&quot;'>
+          <calculation class='tableau' formula='&quot;Donut&quot;' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='googleplaystoreapps.csv' id='googleplaystoreapps.csv_FF8BCF00A87C4069B582E5787716E88D'>
+            <properties context=''>
+              <relation connection='textscan.05f97fg107cddg182b6sg1i5gutc' name='googleplaystoreapps.csv' table='[C:\Users\sures\Documents\My Tableau Repository\Datasources\2023.1\en_US-US\googleplaystoreapps#csv]' type='table'>
+                <columns character-set='UTF-8' gridOrigin='A1:J7478:no:A1:J7478:2' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='App' ordinal='0' />
+                  <column datatype='string' name='Category' ordinal='1' />
+                  <column datatype='string' name='Rating' ordinal='2' />
+                  <column datatype='integer' name='Reviews' ordinal='3' />
+                  <column datatype='integer' name='Size' ordinal='4' />
+                  <column datatype='integer' name='Installs' ordinal='5' />
+                  <column datatype='string' name='Type' ordinal='6' />
+                  <column datatype='string' name='Price' ordinal='7' />
+                  <column datatype='string' name='Content Rating' ordinal='8' />
+                  <column datatype='date' name='Last Updated' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.05cla7s1od0x7818xnm9n1tutg5l'>
+      <datasources>
+        <datasource caption='googleplaystoreapps' name='federated.05cla7s1od0x7818xnm9n1tutg5l' />
+      </datasources>
+      <datasource-dependencies datasource='federated.05cla7s1od0x7818xnm9n1tutg5l'>
+        <column caption='Installs &amp; Reviews Ratio' datatype='real' name='[Calculation_865817073093193744]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='SUM([Installs])/SUM([Reviews])' />
+        </column>
+        <column datatype='string' name='[Content Rating]' role='dimension' type='nominal' />
+        <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+        <column-instance column='[Content Rating]' derivation='None' name='[none:Content Rating:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Calculation_865817073093193744]' derivation='User' name='[usr:Calculation_865817073093193744:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]'>
+        <groupfilter function='level-members' level='[none:Content Rating:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+        <target field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' />
+      </filter>
+      <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Type:nk]'>
+        <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='level-members' level='[none:Type:nk]' />
+          <groupfilter function='member' level='[none:Type:nk]' member='%null%' />
+        </groupfilter>
+        <target field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Type:nk]' />
+      </filter>
+      <filter class='quantitative' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[usr:Calculation_865817073093193744:qk]' included-values='in-range'>
+        <max>549.45054945054949</max>
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Filter 2 (generated)' name='[Action2_A10EDDAEA8D94A66A7D98275157A295D]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Google Play Store Apps' type='sheet' worksheet='Installs &amp; Reviews' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Google Play Store Apps' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action3_03E97675ED13483AAC89B751766C95AE]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Google Play Store Apps' type='sheet' worksheet='Category' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Google Play Store Apps' />
+      </command>
+    </action>
+    <action caption='Filter 4 (generated)' name='[Action4_C2A5E983A47F4FBD96C0BCFFFBD8043D]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Google Play Store Apps' type='sheet' worksheet='Installs &amp; Reviews Trend' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Google Play Store Apps' />
+      </command>
+    </action>
+    <action caption='Filter 5 (generated)' name='[Action5_9F1A9D016D9A4202873007F38C056CA4]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Google Play Store Apps' type='sheet' worksheet='Size' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Google Play Store Apps' />
+      </command>
+    </action>
+    <action caption='Filter 1 (generated)' name='[Action6_029D8BD62BB1430CAE3DBB952DFCBA95]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Google Play Store Apps' type='sheet' worksheet='Content Rating Distribution' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Google Play Store Apps' />
+      </command>
+    </action>
+    <action caption='Filter 6 (generated)' name='[Action6_2CBB9ACDD7244CCB85DB38D23815EED8]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Google Play Store Apps' type='sheet' worksheet='Last Updated' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Google Play Store Apps' />
+      </command>
+    </action>
+    <action caption='Filter 7 (generated)' name='[Action7_1C744DA572004BCD924968225C3E0BB1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Google Play Store Apps' type='sheet' worksheet='Content Rating' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Google Play Store Apps' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Category'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='googleplaystoreapps' name='federated.05cla7s1od0x7818xnm9n1tutg5l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05cla7s1od0x7818xnm9n1tutg5l'>
+            <column caption='Installs &amp; Reviews Ratio' datatype='real' name='[Calculation_865817073093193744]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Installs])/SUM([Reviews])' />
+            </column>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Content Rating]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Installs]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Reviews]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Content Rating]' derivation='None' name='[none:Content Rating:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_865817073093193744]' derivation='User' name='[usr:Calculation_865817073093193744:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category)]'>
+            <groupfilter function='level-members' level='[Category]' user:ui-action-filter='[Action4_C2A5E983A47F4FBD96C0BCFFFBD8043D]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category,Content Rating)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action5_9F1A9D016D9A4202873007F38C056CA4]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Category]' />
+              <groupfilter function='level-members' level='[Content Rating]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Content Rating)]'>
+            <groupfilter function='level-members' level='[Content Rating]' user:ui-action-filter='[Action1_6AB76F91733D479CBD0DBE5F0AD6C014]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <manual-sort column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Category:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;BEAUTY&quot;</bucket>
+              <bucket>&quot;PARENTING&quot;</bucket>
+              <bucket>&quot;PRODUCTIVITY&quot;</bucket>
+              <bucket>&quot;COMICS&quot;</bucket>
+              <bucket>&quot;DATING&quot;</bucket>
+              <bucket>&quot;MEDICAL&quot;</bucket>
+              <bucket>&quot;ENTERTAINMENT&quot;</bucket>
+              <bucket>&quot;LIFESTYLE&quot;</bucket>
+              <bucket>&quot;TOOLS&quot;</bucket>
+              <bucket>&quot;WEATHER&quot;</bucket>
+              <bucket>&quot;EVENTS&quot;</bucket>
+              <bucket>&quot;SHOPPING&quot;</bucket>
+              <bucket>&quot;PHOTOGRAPHY&quot;</bucket>
+              <bucket>&quot;GAME&quot;</bucket>
+              <bucket>&quot;EDUCATION&quot;</bucket>
+              <bucket>&quot;FAMILY&quot;</bucket>
+              <bucket>&quot;SPORTS&quot;</bucket>
+              <bucket>&quot;COMMUNICATION&quot;</bucket>
+              <bucket>&quot;SOCIAL&quot;</bucket>
+              <bucket>&quot;BUSINESS&quot;</bucket>
+              <bucket>&quot;FINANCE&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Content Rating)]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category)]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category,Content Rating)]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[usr:Calculation_865817073093193744:qk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Type:nk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[usr:Calculation_865817073093193744:qk]' value='Installs &amp; Reviews Ratio'>
+              <formatted-text>
+                <run fontalignment='1'>Installs &amp; Reviews Ratio</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Category:nk]</rows>
+        <cols>[federated.05cla7s1od0x7818xnm9n1tutg5l].[usr:Calculation_865817073093193744:qk]</cols>
+      </table>
+      <simple-id uuid='{16173269-B28E-4A5A-85B7-85696B51A88E}' />
+    </worksheet>
+    <worksheet name='Content Rating'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='googleplaystoreapps' name='federated.05cla7s1od0x7818xnm9n1tutg5l' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Chart' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Donut&quot;'>
+              <calculation class='tableau' formula='&quot;Donut&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.05cla7s1od0x7818xnm9n1tutg5l'>
+            <column caption='Chart' datatype='string' name='[Calculation_562668523544489994]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+            </column>
+            <column caption='0' datatype='integer' name='[Calculation_865817073089646604]' role='measure' type='quantitative' user:unnamed='Sheet 1'>
+              <calculation class='tableau' formula='0' />
+            </column>
+            <column caption='0' datatype='integer' name='[Calculation_865817073089654798]' role='measure' type='quantitative' user:unnamed='Sheet 1'>
+              <calculation class='tableau' formula='0' />
+            </column>
+            <column caption='Installs &amp; Reviews Ratio' datatype='real' name='[Calculation_865817073093193744]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Installs])/SUM([Reviews])' />
+            </column>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Content Rating]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Installs]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Reviews]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_562668523544489994]' derivation='None' name='[none:Calculation_562668523544489994:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Content Rating]' derivation='None' name='[none:Content Rating:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Installs]' derivation='Sum' name='[pcto:sum:Installs:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Calculation_865817073089646604]' derivation='Sum' name='[sum:Calculation_865817073089646604:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_865817073089654798]' derivation='Sum' name='[sum:Calculation_865817073089654798:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Installs]' derivation='Sum' name='[sum:Installs:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_865817073093193744]' derivation='User' name='[usr:Calculation_865817073093193744:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category)]'>
+            <groupfilter function='level-members' level='[Category]' user:ui-action-filter='[Action4_C2A5E983A47F4FBD96C0BCFFFBD8043D]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category,Content Rating)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_03E97675ED13483AAC89B751766C95AE]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Category]' />
+              <groupfilter function='level-members' level='[Content Rating]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Content Rating)]'>
+            <groupfilter function='level-members' level='[Content Rating]' user:ui-action-filter='[Action2_A10EDDAEA8D94A66A7D98275157A295D]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Calculation_562668523544489994:nk]'>
+            <groupfilter function='member' level='[none:Calculation_562668523544489994:nk]' member='&quot;Donut&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate' />
+          </filter>
+          <computed-sort column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' direction='ASC' using='[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Calculation_865817073089646604:qk]' />
+          <slices>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Content Rating)]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category,Content Rating)]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category)]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[usr:Calculation_865817073093193744:qk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Type:nk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Calculation_562668523544489994:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Calculation_865817073089654798:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Calculation_865817073089646604:qk]' scope='rows' value='' />
+            <format attr='title' class='0' field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Calculation_865817073089654798:qk]' scope='rows' value='' />
+            <format attr='display' class='0' field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Calculation_865817073089654798:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Calculation_865817073089646604:qk]' scope='rows' value='false' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Installs:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f2e2da</color>
+                <color>#f3d3c3</color>
+                <color>#f5c4ab</color>
+                <color>#f6b493</color>
+                <color>#f8a57c</color>
+                <color>#f99563</color>
+                <color>#fa854b</color>
+                <color>#fc7532</color>
+                <color>#fd6519</color>
+                <color>#ff5500</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[pcto:sum:Installs:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f2e2da</color>
+                <color>#f3d3c3</color>
+                <color>#f5c4ab</color>
+                <color>#f6b493</color>
+                <color>#f8a57c</color>
+                <color>#f99563</color>
+                <color>#fa854b</color>
+                <color>#fc7532</color>
+                <color>#fd6519</color>
+                <color>#ff5500</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='496' />
+                <format attr='maxwidth' value='496' />
+                <format attr='minheight' value='420' />
+                <format attr='maxheight' value='420' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Calculation_865817073089646604:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' />
+              <wedge-size column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Installs:qk]' />
+              <text column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' />
+              <text column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[pcto:sum:Installs:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='4.0901985168457031' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='496' />
+                <format attr='maxwidth' value='496' />
+                <format attr='minheight' value='420' />
+                <format attr='maxheight' value='420' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Calculation_865817073089654798:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='2.1546962261199951' />
+                <format attr='mark-color' value='#ffffff' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='496' />
+                <format attr='maxwidth' value='496' />
+                <format attr='minheight' value='420' />
+                <format attr='maxheight' value='420' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Calculation_865817073089646604:qk] + [federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Calculation_865817073089654798:qk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{3D59155F-C685-4188-AD30-316F4E8B302E}' />
+    </worksheet>
+    <worksheet name='Content Rating Distribution'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='googleplaystoreapps' name='federated.05cla7s1od0x7818xnm9n1tutg5l' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Chart' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Donut&quot;'>
+              <calculation class='tableau' formula='&quot;Donut&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.05cla7s1od0x7818xnm9n1tutg5l'>
+            <column caption='Chart' datatype='string' name='[Calculation_562668523544489994]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Parameters].[Parameter 1]' />
+            </column>
+            <column caption='Installs &amp; Reviews Ratio' datatype='real' name='[Calculation_865817073093193744]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Installs])/SUM([Reviews])' />
+            </column>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Content Rating]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Installs]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Reviews]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_562668523544489994]' derivation='None' name='[none:Calculation_562668523544489994:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Content Rating]' derivation='None' name='[none:Content Rating:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Installs]' derivation='Sum' name='[sum:Installs:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_865817073093193744]' derivation='User' name='[usr:Calculation_865817073093193744:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category,Content Rating)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action5_9F1A9D016D9A4202873007F38C056CA4]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Category]' />
+              <groupfilter function='level-members' level='[Content Rating]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Content Rating)]'>
+            <groupfilter function='level-members' level='[Content Rating]' user:ui-action-filter='[Action7_1C744DA572004BCD924968225C3E0BB1]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Calculation_562668523544489994:nk]'>
+            <groupfilter function='member' level='[none:Calculation_562668523544489994:nk]' member='&quot;Bar&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Installs:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category,Content Rating)]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[usr:Calculation_865817073093193744:qk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Type:nk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Calculation_562668523544489994:nk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Content Rating)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' value='61' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Installs:qk]</rows>
+        <cols>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]</cols>
+      </table>
+      <simple-id uuid='{3F4F0E86-5C2A-48B6-87E2-3B892A568B22}' />
+    </worksheet>
+    <worksheet name='Installs &amp; Reviews'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='googleplaystoreapps' name='federated.05cla7s1od0x7818xnm9n1tutg5l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05cla7s1od0x7818xnm9n1tutg5l'>
+            <column caption='Installs &amp; Reviews Ratio' datatype='real' name='[Calculation_865817073093193744]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Installs])/SUM([Reviews])' />
+            </column>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Content Rating]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Installs]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Reviews]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column-instance column='[Content Rating]' derivation='None' name='[none:Content Rating:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Installs]' derivation='Sum' name='[sum:Installs:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Reviews]' derivation='Sum' name='[sum:Reviews:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_865817073093193744]' derivation='User' name='[usr:Calculation_865817073093193744:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Installs:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Reviews:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Installs:qk]&quot;</bucket>
+              <bucket>&quot;[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Reviews:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category)]'>
+            <groupfilter function='level-members' level='[Category]' user:ui-action-filter='[Action4_C2A5E983A47F4FBD96C0BCFFFBD8043D]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category,Content Rating)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_03E97675ED13483AAC89B751766C95AE]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Category]' />
+              <groupfilter function='level-members' level='[Content Rating]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Content Rating)]'>
+            <groupfilter function='level-members' level='[Content Rating]' user:ui-action-filter='[Action1_6AB76F91733D479CBD0DBE5F0AD6C014]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <manual-sort column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Everyone&quot;</bucket>
+              <bucket>&quot;Teen&quot;</bucket>
+              <bucket>&quot;Everyone 10+&quot;</bucket>
+              <bucket>&quot;Mature 17+&quot;</bucket>
+              <bucket>&quot;Adults only 18+&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[:Measure Names]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Content Rating)]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category,Content Rating)]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category)]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[usr:Calculation_865817073093193744:qk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Type:nk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Multiple Values]' scope='rows' value='' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' value='false' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='1' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='div-level' scope='cols' value='1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Multiple Values]</rows>
+        <cols>([federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk] / [federated.05cla7s1od0x7818xnm9n1tutg5l].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{767382A4-D005-4C00-B38E-8E9FA58E1DB2}' />
+    </worksheet>
+    <worksheet name='Installs &amp; Reviews Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='googleplaystoreapps' name='federated.05cla7s1od0x7818xnm9n1tutg5l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05cla7s1od0x7818xnm9n1tutg5l'>
+            <column caption='Installs &amp; Reviews Ratio' datatype='real' name='[Calculation_865817073093193744]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Installs])/SUM([Reviews])' />
+            </column>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Content Rating]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Installs]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Reviews]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column-instance column='[Content Rating]' derivation='None' name='[none:Content Rating:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Installs]' derivation='Sum' name='[sum:Installs:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Reviews]' derivation='Sum' name='[sum:Reviews:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_865817073093193744]' derivation='User' name='[usr:Calculation_865817073093193744:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category,Content Rating)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_03E97675ED13483AAC89B751766C95AE]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Category]' />
+              <groupfilter function='level-members' level='[Content Rating]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Content Rating)]'>
+            <groupfilter function='level-members' level='[Content Rating]' user:ui-action-filter='[Action1_6AB76F91733D479CBD0DBE5F0AD6C014]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Content Rating)]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category,Content Rating)]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[usr:Calculation_865817073093193744:qk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Type:nk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Installs:qk]</rows>
+        <cols>[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Reviews:qk]</cols>
+      </table>
+      <simple-id uuid='{B51E85C1-6E20-42A0-9EF4-2AD79309DD02}' />
+    </worksheet>
+    <worksheet name='Last Updated'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='googleplaystoreapps' name='federated.05cla7s1od0x7818xnm9n1tutg5l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05cla7s1od0x7818xnm9n1tutg5l'>
+            <column caption='Installs &amp; Reviews Ratio' datatype='real' name='[Calculation_865817073093193744]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Installs])/SUM([Reviews])' />
+            </column>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Content Rating]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Installs]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Last Updated]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Reviews]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column-instance column='[Last Updated]' derivation='Month' name='[mn:Last Updated:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Content Rating]' derivation='None' name='[none:Content Rating:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Installs]' derivation='Sum' name='[sum:Installs:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_865817073093193744]' derivation='User' name='[usr:Calculation_865817073093193744:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category,Content Rating)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_03E97675ED13483AAC89B751766C95AE]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Category]' />
+              <groupfilter function='level-members' level='[Content Rating]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Content Rating)]'>
+            <groupfilter function='level-members' level='[Content Rating]' user:ui-action-filter='[Action5_9DD526D662FA43468CA8D4F9838377B7]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Type:nk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[usr:Calculation_865817073093193744:qk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Content Rating)]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category,Content Rating)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Installs:qk]</rows>
+        <cols>[federated.05cla7s1od0x7818xnm9n1tutg5l].[mn:Last Updated:ok]</cols>
+      </table>
+      <simple-id uuid='{BA17CC42-498C-4D95-AD5E-C2BAE0B4D13B}' />
+    </worksheet>
+    <worksheet name='Size'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='googleplaystoreapps' name='federated.05cla7s1od0x7818xnm9n1tutg5l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05cla7s1od0x7818xnm9n1tutg5l'>
+            <column caption='Corrected Size' datatype='integer' name='[Calculation_865817073089224714]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF isnull([Size]) then 0&#13;&#10;ELSE [Size]&#13;&#10;END' />
+            </column>
+            <column caption='Installs &amp; Reviews Ratio' datatype='real' name='[Calculation_865817073093193744]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Installs])/SUM([Reviews])' />
+            </column>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Content Rating]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Installs]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Reviews]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Size]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Content Rating]' derivation='None' name='[none:Content Rating:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_865817073089224714]' derivation='Sum' name='[sum:Calculation_865817073089224714:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Size]' derivation='Sum' name='[sum:Size:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_865817073093193744]' derivation='User' name='[usr:Calculation_865817073093193744:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category)]'>
+            <groupfilter function='level-members' level='[Category]' user:ui-action-filter='[Action4_C2A5E983A47F4FBD96C0BCFFFBD8043D]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Content Rating)]'>
+            <groupfilter function='level-members' level='[Content Rating]' user:ui-action-filter='[Action6_029D8BD62BB1430CAE3DBB952DFCBA95]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Size:qk]' included-values='non-null' />
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Category:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Size:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Size:qk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Category)]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[usr:Calculation_865817073093193744:qk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Type:nk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]</column>
+            <column>[federated.05cla7s1od0x7818xnm9n1tutg5l].[Action (Content Rating)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Calculation_865817073089224714:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Type:nk]' value='Type'>
+              <formatted-text>
+                <run fontalignment='1'>Type</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' value='Content Rating'>
+              <formatted-text>
+                <run fontalignment='1'>Content Rating</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.05cla7s1od0x7818xnm9n1tutg5l].[sum:Calculation_865817073089224714:qk]</rows>
+        <cols>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Category:nk]</cols>
+      </table>
+      <simple-id uuid='{8D96B2E2-B739-44BB-A5FE-62A8E5DE0618}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Google Play Store Apps'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000'>Google Play Store App Metrics</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='googleplaystoreapps' name='federated.05cla7s1od0x7818xnm9n1tutg5l' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Chart' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Donut&quot;'>
+          <calculation class='tableau' formula='&quot;Donut&quot;' />
+          <members>
+            <member value='&quot;Donut&quot;' />
+            <member value='&quot;Bar&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.05cla7s1od0x7818xnm9n1tutg5l'>
+        <column caption='Installs &amp; Reviews Ratio' datatype='real' name='[Calculation_865817073093193744]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='SUM([Installs])/SUM([Reviews])' />
+        </column>
+        <column datatype='string' name='[Content Rating]' role='dimension' type='nominal' />
+        <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+        <column-instance column='[Content Rating]' derivation='None' name='[none:Content Rating:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Calculation_865817073093193744]' derivation='User' name='[usr:Calculation_865817073093193744:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97260' id='71' param='horz' type-v2='layout-flow' w='98614' x='693' y='1370'>
+            <zone h='97260' id='40' param='vert' type-v2='layout-flow' w='98614' x='693' y='1370'>
+              <zone h='7192' id='41' type-v2='title' w='98614' x='693' y='1370'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='90068' id='17' param='horz' type-v2='layout-flow' w='98614' x='693' y='8562'>
+                <zone h='90068' id='5' type-v2='layout-basic' w='98614' x='693' y='8562'>
+                  <zone h='34842' id='8' name='Installs &amp; Reviews' w='32940' x='33369' y='8562'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='55226' id='11' name='Category' w='32940' x='33369' y='43404'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='32026' id='15' name='Installs &amp; Reviews Trend' w='32676' x='693' y='66604'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='57978' id='19' name='Size' w='32998' x='66309' y='8562'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='32090' id='54' name='Last Updated' w='32998' x='66309' y='66540'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='58042' id='73' param='horz' type-v2='layout-flow' w='32676' x='693' y='8562'>
+                    <zone h='58042' id='74' name='Content Rating' show-title='false' w='32676' x='693' y='8562'>
+                      <layout-cache cell-count-w='1' has-max-size-h='true' maxheight='420' minheight='420' type-h='scalable' type-w='cell' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='58042' id='75' name='Content Rating Distribution' show-title='false' w='0' x='33369' y='8562'>
+                      <layout-cache type-h='fixed' type-w='cell' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='15240' id='20' mode='checklist' name='Size' param='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Type:nk]' type-v2='filter' w='5801' x='82771' y='7705'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='4' />
+          </zone-style>
+        </zone>
+        <zone h='25514' id='21' mode='checklist' name='Size' param='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' type-v2='filter' w='11255' x='88571' y='7705'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='4' />
+          </zone-style>
+        </zone>
+        <zone h='3425' id='22' name='Size' pane-specification-id='0' param='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' show-title='false' type-v2='color' w='53074' x='35238' y='2226' />
+        <zone h='10274' id='14' name='Category' param='[federated.05cla7s1od0x7818xnm9n1tutg5l].[usr:Calculation_865817073093193744:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='12294' x='87446' y='64212' />
+        <zone alt-text='GitHub' h='5308' id='42' is-centered='0' is-scaled='1' param='C:/Users/sures/Documents/My Tableau Repository/Images/github image.png' type-v2='bitmap' url='https://github.com/SujeethShingade' w='3550' x='95931' y='1199' />
+        <zone forceUpdate='true' h='7534' id='49' type-v2='text' w='10649' x='85108' y='171'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontsize='10'>S Sujeeth Shingade</run>
+          </formatted-text>
+        </zone>
+        <zone h='10959' id='72' mode='list' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='6494' x='433' y='55993' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontcolor='#000000'>Google Play Store App Metrics</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='2450' minheight='2450' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='88' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97260' id='87' param='vert' type-v2='layout-flow' w='98614' x='693' y='1370'>
+                <zone h='7192' id='41' type-v2='title' w='98614' x='693' y='1370'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='7534' id='49' type-v2='text' w='10649' x='85108' y='171'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#000000' fontsize='10'>S Sujeeth Shingade</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone alt-text='GitHub' fixed-size='42' h='5308' id='42' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/sures/Documents/My Tableau Repository/Images/github image.png' type-v2='bitmap' url='https://github.com/SujeethShingade' w='3550' x='95931' y='1199'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='58042' id='74' is-fixed='true' name='Content Rating' show-title='false' w='32676' x='693' y='8562'>
+                  <layout-cache cell-count-w='1' has-max-size-h='true' maxheight='420' minheight='420' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='271' h='34842' id='8' is-fixed='true' name='Installs &amp; Reviews' w='32940' x='33369' y='8562'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='58042' id='75' is-fixed='true' name='Content Rating Distribution' show-title='false' w='0' x='33369' y='8562'>
+                  <layout-cache type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='15240' id='20' mode='checkdropdown' name='Size' param='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Type:nk]' type-v2='filter' w='5801' x='82771' y='7705'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='25514' id='21' mode='checkdropdown' name='Size' param='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' type-v2='filter' w='11255' x='88571' y='7705'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='57978' id='19' is-fixed='true' name='Size' w='32998' x='66309' y='8562'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3425' id='22' name='Size' pane-specification-id='0' param='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' show-title='false' type-v2='color' w='53074' x='35238' y='2226'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10274' id='14' name='Category' param='[federated.05cla7s1od0x7818xnm9n1tutg5l].[usr:Calculation_865817073093193744:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='12294' x='87446' y='64212'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='55226' id='11' is-fixed='true' name='Category' w='32940' x='33369' y='43404'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10959' id='72' mode='list' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='6494' x='433' y='55993'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='249' h='32090' id='54' is-fixed='true' name='Last Updated' w='32998' x='66309' y='66540'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='248' h='32026' id='15' is-fixed='true' name='Installs &amp; Reviews Trend' w='32676' x='693' y='66604'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{31921B2E-1859-481D-8799-D7F4125EDD19}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='Google Play Store Apps'>
+      <viewpoints>
+        <viewpoint name='Category'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Content Rating'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Content Rating Distribution'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Installs &amp; Reviews'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Installs &amp; Reviews Trend'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Category:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Last Updated'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Size'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='19' />
+      <simple-id uuid='{6DC793D5-C0E2-499E-A77E-E73C06101A70}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Category'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Category:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{31EE41F4-5672-45FD-B1E0-1DFA9E8E8EB5}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Content Rating'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Calculation_562668523441065985:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Calculation_562668523543207944:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Calculation_562668523544080393:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Calculation_562668523544489994:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Price:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Rating:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4DAB8CE8-8ACE-4B03-A0E1-7CF325A331AA}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Content Rating Distribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Calculation_562668523543207944:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Calculation_562668523544489994:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[usr:Calculation_562668523540774918:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{72A2B061-FE5B-4AAA-9AE9-F68211D6FC32}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Installs &amp; Reviews'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:App:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Calculation_865817073010225158:ok]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Category:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Price:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Rating:ok]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[yr:Last Updated:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{6EF3A62C-CC99-4DAA-B265-488CC6BD5726}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Installs &amp; Reviews Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Calculation_562668523444674563:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5B027E69-9F64-4ECF-A221-6B1A10450702}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Last Updated'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Category:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[yr:Last Updated:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A37171EE-A785-4D80-B04F-132CBBBA7208}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Size'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Category:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Content Rating:nk]</field>
+            <field>[federated.05cla7s1od0x7818xnm9n1tutg5l].[none:Type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E2B4A0DD-133A-4E4A-9D39-F33A8C993C11}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Google Play Store Apps' width='192'>
+      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
+      57BCjwNoDYwAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
